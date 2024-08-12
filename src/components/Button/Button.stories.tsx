@@ -40,6 +40,20 @@ export const Secondary: Story = {
   },
 };
 
+export const Outline: Story = {
+  args: {
+    children: 'Outline variant',
+    variant: 'outline'
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    children: 'Ghost variant',
+    variant: 'ghost'
+  },
+};
+
 export const AsChild: Story = {
   args: {
     children: <input type="submit" value="Submit" />, 

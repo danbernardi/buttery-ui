@@ -7,16 +7,39 @@ import * as ButtonStories from './Button.stories';
  
 # Button
 
-Button is a clickable interactive element that triggers a response.
- 
-<Canvas of={ButtonStories.Primary} />
+Button is a clickable interactive element that fires the `onClick` event when tapped. By default it renders as a `<button>` element, but using the `asChild` prop you can pass the button styles down to its immediate child element, such as an `<a>` `<Link>` or `<input type="submit" />` element.
 
-## Props
+``` jsx
+import { Button } from '@dbernardi/buttery-ui';
+
+<Button>Click me</Button>
+```
+
+ ## Example
+<Canvas of={ButtonStories.Primary} />
 <Controls />
 
-## Usage
-Set the asChild prop to true to pass the button styles to the components immediate child. This is useful when you want to render an anchor / link element or input as a button and maintain proper html semantics. Inspect the component below, you'll see that it is rendering an input element but appears as a button.
+## AsChild
+Set the `asChild` prop to true to pass the button styles to the components immediate child. This is useful when you want to render an anchor / link element or input as a button and maintain proper html semantics. Inspect the button in the preview below, you'll see that it is rendering an input element but is visually indistinguishable from the styled button element.
+
+``` jsx
+import { Button } from '@dbernardi/buttery-ui';
+
+<Button asChild>
+  <input type="submit" value="Submit" />
+</Button>
+```
 
 <Canvas of={ButtonStories.AsChild} />
 
+
+## Variants
+The variant prop can be used to change the button style. The default variant is `primary`.  
+
+<Canvas of={ButtonStories.Primary} />
+
 <Canvas of={ButtonStories.Secondary} />
+
+<Canvas of={ButtonStories.Outline} />
+
+<Canvas of={ButtonStories.Ghost} />
