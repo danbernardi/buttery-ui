@@ -1,0 +1,25 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+
+ 
+import * as AccordionStories from './Accordion.stories';
+ 
+<Meta of={AccordionStories} />
+ 
+# Accordion
+
+Accordion is a collapsible content container that can be used to hide or show additional content. It is useful for displaying information that is not crucial to the user's current task or workflow.
+
+``` jsx
+import { Accordion } from '@dbernardi/buttery-ui';
+
+<Accordion
+  id="accordion-1"
+  title="Click to open/close"
+>
+  Accordion content that is revealed when the accordion is open.
+</Accordion>
+```
+
+ ## Example
+<Canvas of={AccordionStories.Primary} />
+<Controls />

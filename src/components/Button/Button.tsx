@@ -13,10 +13,10 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const baseBtnStyles = 'px-4 py-2 rounded-md border-[1px]';
 
 const btnStyles = (variant: Props['variant']) => ({
-  primary: 'bg-blue-500 border-blue-500 text-white hover:bg-blue-800 hover:brder-blue-800',
+  primary: 'bg-blue-500 border-blue-500 text-white hover:bg-blue-800 hover:border-blue-800',
   secondary: 'bg-gray-100 border-gray-100 text-gray-700 hover:bg-gray-500 hover:border-gray-500 hover:text-white',
-  outline: 'bg-white border-blue-500 text-blue-500 hover:bg-blue-500 hover:border-blue-500 hover:text-white',
-  ghost: 'bg-white border-white text-gray-700 hover:bg-gray-100 hover:border-gray-100',
+  outline: 'bg-transparent border-blue-500 text-blue-500 hover:bg-blue-500 hover:border-blue-500 hover:text-white',
+  ghost: 'bg-transparent border-transparent text-gray-700 hover:bg-gray-100 hover:border-gray-100',
 })[variant || 'primary'];
 
 export const Button = forwardRef<HTMLButtonElement, Props>(
