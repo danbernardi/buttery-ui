@@ -1,0 +1,22 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+
+ 
+import * as ButtonStories from './Button.stories';
+ 
+<Meta of={ButtonStories} />
+ 
+# Button
+
+Button is a clickable interactive element that triggers a response.
+ 
+<Canvas of={ButtonStories.Primary} />
+
+## Props
+<Controls />
+
+## Usage
+Set the asChild prop to true to pass the button styles to the components immediate child. This is useful when you want to render an anchor / link element or input as a button and maintain proper html semantics. Inspect the component below, you'll see that it is rendering an input element but appears as a button.
+
+<Canvas of={ButtonStories.AsChild} />
+
+<Canvas of={ButtonStories.Secondary} />
